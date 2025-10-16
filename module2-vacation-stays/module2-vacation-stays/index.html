@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 2 Solution — Responsive Vacation Stays</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Escape Planner — Featured Stays</h1>
+    <p class="tagline">Three sun-soaked destinations, one perfect getaway.</p>
+  </header>
+
+  <main class="row">
+    <section class="card" aria-labelledby="hawaii-title">
+      <div class="card-title" id="hawaii-title">Hawaii</div>
+      <div class="card-content">
+        <p>
+          Oceanfront suites steps from pristine beaches. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Integer dignissim turpis vitae tincidunt tincidunt.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames.
+        </p>
+        <p>
+          Snorkeling coves, lush trails, and sunset luaus nearby. Quisque egestas dui at
+          metus iaculis, id varius mauris lacinia.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="miami-title">
+      <div class="card-title" id="miami-title">Miami</div>
+      <div class="card-content">
+        <p>
+          Art Deco vibes and nightlife by the shore. Vestibulum fringilla mi sit amet
+          posuere lacinia. Nulla justo dictum augue, in porta arcu eros quis nisl.
+        </p>
+        <p>
+          Rooftop pool, walkable cafes, and sunny boardwalks. Integer blandit, quam ac
+          vulputate iaculis, neque est laoreet turpis.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="bahamas-title">
+      <div class="card-title" id="bahamas-title">Bahamas</div>
+      <div class="card-content">
+        <p>
+          Turquoise waters and secluded island bungalows. Morbi faucibus nisl ac pharetra
+          vehicula, arcu magna cursus massa. Curabitur a enim vitae urna volutpat
+          consectetur.
+        </p>
+        <p>
+          Private docks, coral reefs, and glass-bottom tours. Sed dictum risus at volutpat
+          tincidunt.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Escape Planner. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

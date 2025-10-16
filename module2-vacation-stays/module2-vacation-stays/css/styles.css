@@ -1,0 +1,104 @@
+/* Module 2 — Responsive Vacation Stays (no frameworks, float-based grid) */
+
+/* Reset & base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #fafafa;
+}
+
+/* Typography scale */
+:root {
+  --base: 16px;
+}
+
+body { font-size: var(--base); }
+h1 { font-size: calc(var(--base) * 1.75); margin: 0 0 0.25rem; }
+.card-title { font-size: calc(var(--base) * 1.25); }
+
+/* Header/Footer */
+.site-header { text-align: center; padding: 2rem 1rem 1rem; }
+.tagline { margin: 0; color: #555; }
+.site-footer { text-align: center; padding: 2rem 1rem; color: #666; }
+
+/* Layout wrapper */
+.row {
+  width: 100%;
+  padding: 0 1rem;     /* spacing from window edges */
+  overflow: hidden;    /* contain floats */
+}
+
+/* Destination card */
+.card {
+  position: relative;  /* containing block for absolute title */
+  background: #fff;
+  border: 1px solid #000;
+  margin: 1rem;        /* spacing between cards */
+  padding: 1rem;
+  padding-top: 3.25rem;/* push content below the title badge */
+  min-height: 240px;
+  float: left;         /* float-based grid per assignment */
+  width: 100%;         /* mobile-first */
+}
+
+/* Title badge pinned top-right */
+.card-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  border: 1px solid #000;
+  padding: 0.4rem 0.75rem;
+  background: #ffe066; /* default; overridden per card below */
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+}
+
+/* Distinct colors per destination */
+.card:nth-of-type(1) { background: #eaf7ff; }            /* Hawaii bg: airy blue */
+.card:nth-of-type(1) .card-title { background: #a0c4ff; }/* Hawaii badge */
+
+.card:nth-of-type(2) { background: #fff0f6; }            /* Miami bg: pastel pink */
+.card:nth-of-type(2) .card-title { background: #ffcad4; }/* Miami badge */
+
+.card:nth-of-type(3) { background: #eefbf2; }            /* Bahamas bg: seafoam */
+.card:nth-of-type(3) .card-title { background: #b7e4c7; }/* Bahamas badge */
+
+/* Content spacing */
+.card-content p { margin: 0 0 1rem; }
+
+/* ----- Breakpoints (strict per assignment) ----- */
+
+/* Tablet: 768px–991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card {
+    width: calc(50% - 2rem); /* two-up grid */
+  }
+  .card:nth-of-type(3) {
+    width: calc(100% - 2rem); /* full row */
+    float: left;
+    clear: both;
+  }
+}
+
+/* Desktop: ≥ 992px */
+@media (min-width: 992px) {
+  .card {
+    width: calc(33.333% - 2rem); /* three equal columns */
+  }
+}
+
+/* Mobile ≤ 767px is the default (100% width) */
