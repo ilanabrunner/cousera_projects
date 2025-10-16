@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 2 Solution — Responsive Shop</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Style Street — New Arrivals</h1>
+    <p class="tagline">Everyday essentials, effortlessly stylish.</p>
+  </header>
+
+  <main class="row">
+    <section class="card" aria-labelledby="shirt-title">
+      <div class="card-title" id="shirt-title">Shirt</div>
+      <div class="card-content">
+        <p>
+          A classic button-up made from breathable cotton. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Integer dignissim turpis vitae tincidunt tincidunt.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames.
+        </p>
+        <p>
+          Tailored fit with reinforced seams. Quisque egestas dui at metus iaculis, id varius
+          mauris lacinia. Sizes XS–XL.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="skirt-title">
+      <div class="card-title" id="skirt-title">Skirt</div>
+      <div class="card-content">
+        <p>
+          A-line silhouette with a flattering mid-rise. Vestibulum fringilla mi sit amet
+          posuere lacinia. Nulla justo dictum augue, in porta arcu eros quis nisl.
+        </p>
+        <p>
+          Soft drape, all-day comfort, and pockets (yes!). Integer blandit, quam ac
+          vulputate iaculis, neque est laoreet turpis.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="dress-title">
+      <div class="card-title" id="dress-title">Dress</div>
+      <div class="card-content">
+        <p>
+          Effortless day-to-night wrap dress. Morbi faucibus nisl ac pharetra vehicula,
+          arcu magna cursus massa. Curabitur a enim vitae urna volutpat consectetur.
+        </p>
+        <p>
+          Lined bodice, adjustable tie, machine-washable. Sed dictum risus at volutpat
+          tincidunt. Sizes 0–16.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> Style Street. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
