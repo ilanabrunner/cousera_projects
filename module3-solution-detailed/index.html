@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food, LLC</title>
+
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Food, LLC</a>
+        <button type="button" class="navbar-toggle collapsed visible-xs"
+                data-toggle="collapse" data-target="#mobile-nav"
+                aria-expanded="false" aria-controls="mobile-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="mobile-nav" class="navbar-collapse collapse visible-xs">
+        <ul class="nav navbar-nav navbar-mobile">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#beef">Beef</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Heading -->
+  <div class="container">
+    <h1 id="top" class="text-center">Our Menu</h1>
+  </div>
+
+  <!-- Tall section using the grid -->
+  <div class="container-fluid">
+    <div class="row">
+      <section class="col-xs-12 tall-section">
+
+        <article id="chicken" class="menu-block">
+          <h3 class="text-center">Chicken</h3>
+          <p>
+            Our chicken dishes are prepared with fresh, never-frozen poultry that is marinated overnight.
+            The marinade is a simple blend of lemon, garlic, parsley, and a touch of olive oil which keeps
+            the meat tender and full of flavor. We roast the chicken at a high temperature to crisp the skin
+            while keeping the inside juicy.
+          </p>
+          <p>
+            For a balanced plate, we serve the chicken with seasonal vegetables that are lightly sautéed in
+            olive oil and finished with sea salt. If you prefer a little heat, ask for our house chili glaze.
+            It adds a gentle kick without overpowering the natural taste of the chicken.
+          </p>
+          <p class="back-top"><a href="#top">Back To Top</a></p>
+        </article>
+
+        <article id="beef" class="menu-block">
+          <h3 class="text-center">Beef</h3>
+          <p>
+            We use high-quality beef that is trimmed carefully and seasoned simply with cracked pepper
+            and kosher salt. The steaks are seared in a hot pan to build a deep golden crust, then finished
+            in the oven to the temperature you request. This approach locks in the juices and brings out the
+            natural richness of the meat.
+          </p>
+          <p>
+            Each beef plate comes with roasted potatoes and a small serving of our pan sauce made with
+            caramelized onions, fresh thyme, and a splash of stock. The result is a savory, slightly sweet
+            sauce that complements the beef without being heavy or overly salty.
+          </p>
+          <p class="back-top"><a href="#top">Back To Top</a></p>
+        </article>
+
+        <article id="sushi" class="menu-block">
+          <h3 class="text-center">Sushi</h3>
+          <p>
+            Our sushi is prepared to order using fish delivered daily from trusted suppliers. The rice
+            is seasoned with rice vinegar and a hint of sugar to create a clean, slightly tangy base for
+            each roll. We offer familiar options like salmon and tuna, along with a rotating selection of
+            seasonal specials.
+          </p>
+          <p>
+            If you are new to sushi, we recommend starting with a simple cucumber roll or a classic
+            California roll, then exploring nigiri pieces one by one. Let us know your preferences and
+            we’ll guide you to options that match your taste and comfort level.
+          </p>
+          <p class="back-top"><a href="#top">Back To Top</a></p>
+        </article>
+
+      </section>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $('#mobile-nav a').on('click', function () {
+        $('#mobile-nav').collapse('hide');
+      });
+    });
+  </script>
+</body>
+</html>
